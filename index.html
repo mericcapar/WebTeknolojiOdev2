@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meric - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="resimler/logo.png" class = "logo">
+            <ul>
+                <li> <a href="#">Home </a> </li>
+                <li> <a href="#">Hakkimda </a> </li>
+                <li> <a href="#">Beceriler </a> </li>
+                <li> <a href="#">Contact </a> </li>
+            </ul>
+        </nav>
+        <div class = "header-text">
+            <p>Python Developer</p>
+            <h1>Merhaba, ben Meric</h1>
+        </div>
+    </div>
+</div>
+<!-------------------Hakkimda ------------------------> 
+<div id = "Hakkimda">
+    <div class = "container">
+        <div class = "row">
+            <div class=" about-col-1">
+                <img src="resimler/vesika.jpg">
+            </div>
+            <div class=" about-col-2">
+                <h1 class = "sub-title"> Ben Kimim</h1>
+                <p>
+                    Ben Meric Capar. Lisede Fen Bilimlerinden mezun olduktan sonra hayalimdeki bolum olan bilgisayar muhendisligi bolumune geldim.
+                    Suleyman Demirel Universitesinde basladigim bu seruveni burada mezun olarak bitirecek gibiyim. 
+                    Bir sene hazirlik okuduktan sonra cesitli okul kulupleri ve etkinliklerde vakit gecirdim ve artik 3. sinif olmamla birlikte bolum derslerime daha cok agirlik vermek istiyorum.
+                    Su zamana kadar veri bilimiyle ilgilendim. Python ve SQL'i yeterli duzeyde biliyorum ve numpy,pandas, matplotlib gibi kutuphanelerle ugrasiyorum.
+                    Henuz kendimi yeterli gormesem de bu sene cok daha fazla ustune duserek bir kac proje yapmak istiyorum.</p>
+                    <div class=" tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class = "tab-links" onclick="opentab('experience')"> Experience</p>
+                        <p class = "tab-links" onclick="opentab('education')"> Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span><br>Data Science</li>
+                            <li><span>SQL</span><br>SQL</li>
+                            <li><span>Swift</span><br>IOS Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-Present</span><br>Burlington - Technical Support</li>
+                            <li><span>2020 - 2023</span><br>BIDB - Computer Technican</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - 2025</span><br>SDU - Bilgisayar Muh.</li>
+
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+<!------------------------ Iletisim ------------------------>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title">Benimle Iletisime Gecin</h1>
+            <p><i class="fas fa-paper-plane"></i> mericcaparrr@gmail.com</p>
+            <p><i class="fa-light fa-phone"></i>05362117597</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/meri%C3%A7-%C3%A7apar-770ba3159/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/mericcapar/odev"><i class="fab fa-github"></i></a>
+            </div>
+            <a href="[CV] Meriç ÇAPAR.pdf" download class = "btn btn2">Download CV</a>
+        </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name ="Name" placeholder = "Isim" required>
+                    <input type="text" name ="email" placeholder = "E-mail" required>
+                    <input type="text" name ="konu" placeholder = "Konu" required>
+                    <textarea name ="mesaj" id="" rows=" " placeholder="Mesaj"> </textarea>
+                    <button type="submit" class="btn btn1">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright"></div>
+    <p>Meric tarafindan yapilmistir. Sayfama goz attiginiz icin tesekkur ederim. Feedbacklerinizi bekliyorum</p>
+</div>
+
+
+
+<script>
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
